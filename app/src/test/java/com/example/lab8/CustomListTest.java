@@ -67,4 +67,12 @@ public class CustomListTest {
             cityList.delete(city); });
     }
 
+    @Test
+    void testCountCities() {
+        CustomList cityList = MockCityList();
+        City city = new City("Regina", "Saskatchewan");
+        cityList.add(city);
+        assertEquals(2, cityList.countCities());
+    }
+
 }
