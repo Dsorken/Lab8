@@ -53,6 +53,7 @@ public class CustomListTest {
     void testDelete() {
         CustomList cityList = MockCityList();
         City city = mockCity();
+        cityList.addCity(city);
         cityList.delete(city);
         assertEquals(0, cityList.getCities().size());
     }
