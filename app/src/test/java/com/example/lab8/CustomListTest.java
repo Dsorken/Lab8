@@ -62,6 +62,7 @@ public class CustomListTest {
     @Test
     void testDeleteException() {
         CustomList cityList = MockCityList();
+        cityList.addCity(mockCity());
         City city = new City("Regina", "Saskatchewan");
         assertThrows( IllegalArgumentException.class, () -> {
             cityList.delete(city); });
