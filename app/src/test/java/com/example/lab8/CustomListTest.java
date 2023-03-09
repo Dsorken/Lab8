@@ -72,7 +72,8 @@ public class CustomListTest {
     void testCountCities() {
         CustomList cityList = MockCityList();
         City city = new City("Regina", "Saskatchewan");
-        cityList.add(city);
+        cityList.addCity(city);
+        cityList.addCity(mockCity());
         assertEquals(2, cityList.countCities());
     }
 }
