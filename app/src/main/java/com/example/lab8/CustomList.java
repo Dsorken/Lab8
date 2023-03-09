@@ -59,7 +59,12 @@ public class CustomList extends ArrayAdapter<City> {
     }
 
     public Boolean hasCity(City city){
-        return false;
+        String cityName = city.getCityName();
+        String provinceName = city.getProvinceName();
+        for (int i = 0; i < cities.size(); i++) {
+            if (cityName != cities.get(i).getCityName() || provinceName != cities.get(i).getProvinceName()) return false;
+        }
+        return true;
     }
 
 
