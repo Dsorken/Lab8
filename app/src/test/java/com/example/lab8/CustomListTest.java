@@ -23,6 +23,10 @@ public class CustomListTest {
         return list;
     }
 
+    private City mockCity() {
+        return new City("Edmonton", "Alberta");
+    }
+
     /**
      * get the size of the list
      * increase the list by adding a new city
@@ -43,6 +47,14 @@ public class CustomListTest {
         City city = new City("Edmonton", "Alberta");
         boolean result = cityList.hasCity(city);
         assertTrue(result);
+    }
+
+    @Test
+    void testDelete() {
+        CustomList cityList = MockCityList();
+        City city = mockCity();
+        cityList.delete(city);
+        assertEquals(0, cityList.getCities().size());
     }
 
 }
