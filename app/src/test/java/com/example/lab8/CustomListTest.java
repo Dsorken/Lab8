@@ -67,7 +67,7 @@ public class CustomListTest {
         assertThrows( IllegalArgumentException.class, () -> {
             cityList.delete(city); });
     }
-    /*
+
     @Test
     void testCountCities() {
         CustomList cityList = MockCityList();
@@ -75,5 +75,4 @@ public class CustomListTest {
         cityList.add(city);
         assertEquals(2, cityList.countCities());
     }
-    */
 }
